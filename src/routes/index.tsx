@@ -112,7 +112,7 @@ function Landing() {
             <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] text-foreground text-balance">
               No estás <span className="font-script text-accent text-6xl md:text-8xl">fallando.</span>
               <br />
-              Estás atrapado en un <span className="text-primary italic">ciclo</span>.
+              Estás atrapado en un <span className="font-script text-primary text-6xl md:text-8xl">ciclo</span>.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
               Te prometiste que esta vez sería diferente, pero algo dentro de ti se activa…
