@@ -4,9 +4,26 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Optima";
+  src: url("/fonts/Optima.ttc") format("truetype-collection"),
+       url("/fonts/Optima.ttc") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cintarini";
+  src: url("/fonts/Cintarini.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-script: "Caveat", cursive;
+  --font-display: "Optima", "Fraunces", ui-serif, Georgia, serif;
+  --font-script: "Cintarini", "Caveat", cursive;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
