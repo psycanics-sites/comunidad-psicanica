@@ -131,6 +131,6 @@
   .gradient-warm { background: var(--gradient-warm); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-card { box-shadow: var(--shadow-card); }
-  .font-script { font-family: var(--font-script); }
+  .font-script { font-family: var(--font-display); font-style: italic; }
   .font-display { font-family: var(--font-display); }
 }
