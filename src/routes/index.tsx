@@ -44,7 +44,7 @@ function Section({ children, className = "", id }: { children: React.ReactNode; 
 function Brand({ light = false }: { light?: boolean }) {
   return (
     <div className="flex items-center gap-2.5">
-      <img src={logo} alt="Psicánica" width={40} height={40} className="w-9 h-9" />
+      <img src={logo} alt="Psicánica" className="h-10 w-auto object-contain" />
       <span
         className={`font-display text-2xl tracking-tight ${light ? "text-white" : "text-primary"}`}
       >
