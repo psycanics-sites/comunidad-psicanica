@@ -211,7 +211,7 @@ function Landing() {
           </p>
           <h2 className="mt-4 text-4xl md:text-5xl text-balance leading-tight">
             No es el evento lo que te atrapa. Es el{" "}
-            <span className="italic text-primary">Loop</span>.
+            <span className="font-script text-primary text-5xl md:text-6xl">Loop</span>.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground text-balance">
             Hay un patrón que se repite dentro de ti, una y otra vez. Cuando lo ves,
@@ -541,7 +541,7 @@ function Landing() {
       <Section className="bg-primary text-primary-foreground">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl text-white">
-            Esto <span className="italic">no</span> es teoría.
+            Esto <span className="font-script text-accent">no</span> es teoría.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-8">
             {[
