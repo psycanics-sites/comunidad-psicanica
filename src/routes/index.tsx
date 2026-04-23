@@ -194,6 +194,19 @@ function Landing() {
               <Play className="w-4 h-4 fill-current" /> Ver video completo
             </CTAButton>
           </div>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="mt-12 max-w-2xl mx-auto text-center text-xl md:text-2xl text-foreground/80 leading-relaxed text-balance"
+          >
+            Si viste el video completo… seguramente algo
+            <br />
+            ya te hizo sentido. Tal vez no todo…
+            <br />
+            pero algo dentro de ti lo <span className="font-script text-accent">reconoció</span>.
+          </motion.p>
         </motion.div>
       </Section>
 
