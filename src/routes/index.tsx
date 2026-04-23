@@ -204,41 +204,50 @@ function Landing() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="grid md:grid-cols-2 gap-16 items-center"
+          className="text-center max-w-3xl mx-auto"
         >
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-accent font-semibold">El patrón</p>
-            <h2 className="mt-3 text-4xl md:text-5xl text-balance leading-tight">
-              No es el evento lo que te atrapa…<br />
-              es el <span className="font-script text-primary text-5xl md:text-6xl">Loop</span>.
-            </h2>
-            <p className="mt-5 text-lg text-muted-foreground">
-              Esto no te pasa por casualidad. Hay un patrón que se repite — y por fin puedes verlo con claridad.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-3">
-              {["Botón", "Reacción", "Dolor", "Consecuencia", "Repetición"].map((step, i) => (
-                <motion.div
-                  key={step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`p-5 rounded-2xl border ${
-                    i % 2 === 0 ? "bg-card border-primary/20" : "bg-accent-soft border-accent/30"
-                  } ${i === 4 ? "col-span-2" : ""} shadow-card`}
-                >
-                  <div className="text-xs text-muted-foreground font-semibold tracking-wider">
-                    PASO {i + 1}
-                  </div>
-                  <div className="font-display text-2xl mt-1 text-foreground">{step}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <p className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+            Esto no te pasa por casualidad
+          </p>
+          <h2 className="mt-4 text-4xl md:text-5xl text-balance leading-tight">
+            No es el evento lo que te atrapa. Es el{" "}
+            <span className="italic text-primary">Loop</span>.
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground text-balance">
+            Hay un patrón que se repite dentro de ti, una y otra vez. Cuando lo ves,
+            empiezas a poder cambiarlo.
+          </p>
         </motion.div>
+
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {[
+            { label: "Botón", desc: "Una experiencia dolorosa: abandono, rechazo, desvalorización." },
+            { label: "Reacción", desc: "Ansiedad, ira, tristeza, culpa." },
+            { label: "Dolor", desc: "El malestar emocional se instala dentro de ti." },
+            { label: "Consecuencia", desc: "Comportamiento compulsivo: comer, comprar, fumar, callarte." },
+            { label: "Repetición", desc: "El patrón se vuelve a activar. Y vuelve a empezar." },
+          ].map((s, i, arr) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="relative"
+            >
+              <div className="rounded-2xl bg-card border border-border p-6 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all h-full">
+                <div className="h-10 w-10 rounded-full bg-accent grid place-items-center text-accent-foreground font-display text-lg mb-4">
+                  {i + 1}
+                </div>
+                <p className="font-display text-xl text-foreground">{s.label}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+              {i < arr.length - 1 && (
+                <ArrowRight className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 h-5 w-5 text-accent z-10" />
+              )}
+            </motion.div>
+          ))}
+        </div>
 
         {/* Examples */}
         <div className="mt-20 grid md:grid-cols-2 gap-6">
