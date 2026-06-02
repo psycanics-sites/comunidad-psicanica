@@ -5,6 +5,7 @@ import {
   Check,
   X,
   ArrowRight,
+  ArrowDown,
   ShieldCheck,
   Users,
   Compass,
