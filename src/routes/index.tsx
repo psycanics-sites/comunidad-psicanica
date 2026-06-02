@@ -14,6 +14,11 @@ import {
   Phone,
   Mail,
   Globe,
+  Zap,
+  Flame,
+  HeartCrack,
+  AlertTriangle,
+  RefreshCw,
 } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroWoman from "@/assets/hero-woman.jpg";
