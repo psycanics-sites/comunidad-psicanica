@@ -92,7 +92,7 @@ function Landing() {
             <a href="#mapa" className="hover:text-primary transition">El Mapa</a>
             <a href="#comunidad" className="hover:text-primary transition">Comunidad</a>
           </div>
-          <CTAButton className="!px-5 !py-2.5 text-sm">Entrar ahora</CTAButton>
+          <CTAButton className="!px-5 !py-2.5 text-sm">Unirme ahora</CTAButton>
         </div>
       </nav>
 
