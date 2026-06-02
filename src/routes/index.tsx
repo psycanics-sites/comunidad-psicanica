@@ -152,7 +152,7 @@ function Landing() {
             Si te identificas con esto…<br />
             <span className="font-script text-accent text-5xl md:text-6xl">esto puede cambiar todo.</span>
           </h2>
-          <p className="mt-5 text-muted-foreground text-lg">
+          <p className="mt-5 text-muted-foreground text-xl">
             Lo que vas a entender puede transformar la forma en que ves todo lo que te pasa por dentro.
           </p>
         </motion.div>
