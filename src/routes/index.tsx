@@ -147,7 +147,7 @@ function Landing() {
           variants={fadeUp}
           className="text-center max-w-3xl mx-auto"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-accent font-semibold">Mira el video completo</p>
+          
           <h2 className="mt-4 text-4xl md:text-5xl text-balance">
             Si te identificas con esto…<br />
             <span className="font-script text-accent text-5xl md:text-6xl">esto puede cambiar todo.</span>
