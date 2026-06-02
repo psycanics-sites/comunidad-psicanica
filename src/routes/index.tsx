@@ -181,7 +181,7 @@ function Landing() {
           </div>
           <div className="mt-8 text-center">
             <CTAButton variant="warm">
-              <Play className="w-4 h-4 fill-current" /> Ver video completo
+              <Play className="w-4 h-4 fill-current" /> Ve el video completo
             </CTAButton>
           </div>
           <motion.p
