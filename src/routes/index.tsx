@@ -137,12 +137,6 @@ function Landing() {
             <div className="absolute -inset-6 gradient-blue rounded-[3rem] opacity-20 blur-2xl" />
             <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-soft bg-sky-soft">
               <img src={heroWoman} alt="Mujer serena" className="w-full h-full object-cover" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="font-script text-2xl text-white leading-tight drop-shadow-lg">
-                "Volví a respirar."
-              </p>
-              <p className="text-xs text-white/90 mt-1 drop-shadow-md">— María, miembro de la comunidad</p>
-            </div>
             </div>
           </motion.div>
         </div>
