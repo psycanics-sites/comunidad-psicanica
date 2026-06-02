@@ -23,6 +23,7 @@ import manPortrait from "@/assets/man-portrait.jpg";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
+import loopCycle from "@/assets/loop-cycle.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
