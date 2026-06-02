@@ -14,6 +14,11 @@ import {
   Phone,
   Mail,
   Globe,
+  Zap,
+  Flame,
+  HeartCrack,
+  AlertTriangle,
+  RefreshCw,
 } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroWoman from "@/assets/hero-woman.jpg";
@@ -226,11 +231,11 @@ function Landing() {
         <div className="mt-14 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             {[
-              { label: "Botón", desc: "Una experiencia dolorosa: abandono, rechazo, desvalorización." },
-              { label: "Reacción", desc: "Ansiedad, ira, tristeza, culpa." },
-              { label: "Dolor", desc: "El malestar emocional se instala dentro de ti." },
-              { label: "Consecuencia", desc: "Comportamiento compulsivo: comer, comprar, fumar, callarte." },
-              { label: "Repetición", desc: "El patrón se vuelve a activar. Y vuelve a empezar." },
+              { label: "Botón", desc: "Una experiencia dolorosa: abandono, rechazo, desvalorización.", Icon: Zap },
+              { label: "Reacción", desc: "Ansiedad, ira, tristeza, culpa.", Icon: Flame },
+              { label: "Dolor", desc: "El malestar emocional se instala dentro de ti.", Icon: HeartCrack },
+              { label: "Consecuencia", desc: "Comportamiento compulsivo: comer, comprar, fumar, callarte.", Icon: AlertTriangle },
+              { label: "Repetición", desc: "El patrón se vuelve a activar. Y vuelve a empezar.", Icon: RefreshCw },
             ].map((s, i, arr) => (
               <motion.div
                 key={s.label}
@@ -238,10 +243,13 @@ function Landing() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="flex gap-5 items-start"
+                className="flex gap-4 md:gap-5 items-start"
               >
+                <div className="h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-accent/60 grid place-items-center shrink-0 text-primary">
+                  <s.Icon className="h-6 w-6 md:h-7 md:w-7" strokeWidth={1.75} />
+                </div>
                 <div className="flex flex-col items-center shrink-0">
-                  <div className="h-12 w-12 rounded-full border-2 border-accent bg-background grid place-items-center text-primary font-display text-lg">
+                  <div className="h-10 w-10 rounded-full bg-primary grid place-items-center text-primary-foreground font-display text-base">
                     {i + 1}
                   </div>
                   {i < arr.length - 1 && (
