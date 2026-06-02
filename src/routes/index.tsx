@@ -106,8 +106,8 @@ function Landing() {
 
         <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur border border-primary/15 text-xs uppercase tracking-[0.18em] text-primary font-semibold">
-              <Sparkles className="w-3.5 h-3.5" /> Cambia desde la raíz
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur border border-primary/15 uppercase tracking-[0.18em] text-primary font-semibold text-sm">
+              <Sparkles className="w-3.5 h-3.5" /> CAMBIA DESDE LA RAÍZ
             </span>
             <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] text-foreground text-balance">
               No estás <span className="font-script text-accent text-6xl md:text-8xl">fallando.</span>
