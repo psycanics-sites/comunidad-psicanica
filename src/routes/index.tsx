@@ -91,7 +91,6 @@ function Landing() {
             <a href="#loop" className="hover:text-primary transition">El Loop</a>
             <a href="#mapa" className="hover:text-primary transition">El Mapa</a>
             <a href="#comunidad" className="hover:text-primary transition">Comunidad</a>
-            <a href="#unirme" className="hover:text-primary transition">Unirme</a>
           </div>
           <CTAButton className="!px-5 !py-2.5 text-sm">Entrar ahora</CTAButton>
         </div>
