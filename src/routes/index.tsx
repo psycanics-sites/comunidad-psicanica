@@ -5,6 +5,7 @@ import {
   Check,
   X,
   ArrowRight,
+  ArrowDown,
   ShieldCheck,
   Users,
   Compass,
@@ -253,7 +254,10 @@ function Landing() {
                     {i + 1}
                   </div>
                   {i < arr.length - 1 && (
-                    <div className="w-px flex-1 bg-accent/40 mt-2 min-h-[2rem]" />
+                    <div className="flex flex-col items-center flex-1 mt-1">
+                      <div className="w-1 flex-1 bg-primary/50 min-h-[2rem] rounded-full" />
+                      <ArrowDown className="w-4 h-4 text-primary/70 -mt-1" strokeWidth={2.5} />
+                    </div>
                   )}
                 </div>
                 <div className="pb-2 flex-1">
