@@ -119,9 +119,6 @@ function Landing() {
               y todo se repite. <span className="text-foreground font-medium">No es solo lo que te pasa: es que siempre regresas al mismo lugar.</span>
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <CTAButton href="#video">
-                <Play className="w-4 h-4 fill-current" /> Ver el video
-              </CTAButton>
               <CTAButton variant="ghost" href="#comunidad">
                 Conoce la comunidad <ArrowRight className="w-4 h-4" />
               </CTAButton>
