@@ -23,6 +23,7 @@ import manPortrait from "@/assets/man-portrait.jpg";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
+import loopCycle from "@/assets/loop-cycle.jpg";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -222,35 +223,62 @@ function Landing() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {[
-            { label: "Botón", desc: "Una experiencia dolorosa: abandono, rechazo, desvalorización." },
-            { label: "Reacción", desc: "Ansiedad, ira, tristeza, culpa." },
-            { label: "Dolor", desc: "El malestar emocional se instala dentro de ti." },
-            { label: "Consecuencia", desc: "Comportamiento compulsivo: comer, comprar, fumar, callarte." },
-            { label: "Repetición", desc: "El patrón se vuelve a activar. Y vuelve a empezar." },
-          ].map((s, i, arr) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative"
-            >
-              <div className="rounded-2xl bg-card border border-border p-6 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all h-full">
-                <div className="h-10 w-10 rounded-full bg-accent grid place-items-center text-accent-foreground font-display text-lg mb-4">
-                  {i + 1}
+        <div className="mt-14 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-8">
+            {[
+              { label: "Botón", desc: "Una experiencia dolorosa: abandono, rechazo, desvalorización." },
+              { label: "Reacción", desc: "Ansiedad, ira, tristeza, culpa." },
+              { label: "Dolor", desc: "El malestar emocional se instala dentro de ti." },
+              { label: "Consecuencia", desc: "Comportamiento compulsivo: comer, comprar, fumar, callarte." },
+              { label: "Repetición", desc: "El patrón se vuelve a activar. Y vuelve a empezar." },
+            ].map((s, i, arr) => (
+              <motion.div
+                key={s.label}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="flex gap-5 items-start"
+              >
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="h-12 w-12 rounded-full border-2 border-accent bg-background grid place-items-center text-primary font-display text-lg">
+                    {i + 1}
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div className="w-px flex-1 bg-accent/40 mt-2 min-h-[2rem]" />
+                  )}
                 </div>
-                <p className="font-display text-xl text-foreground">{s.label}</p>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-              </div>
-              {i < arr.length - 1 && (
-                <ArrowRight className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 h-5 w-5 text-accent z-10" />
-              )}
-            </motion.div>
-          ))}
+                <div className="pb-2 flex-1">
+                  <h3 className="font-display text-2xl text-primary">{s.label}</h3>
+                  <p className="mt-1.5 text-muted-foreground leading-relaxed">{s.desc}</p>
+                  {i < arr.length - 1 && (
+                    <div className="mt-4 h-px bg-border" />
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="hidden lg:block relative"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-card border border-border">
+              <img
+                src={loopCycle}
+                alt="El loop emocional que se repite"
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
         </div>
+
 
         {/* Examples */}
         <div className="mt-20 grid md:grid-cols-2 gap-6">
